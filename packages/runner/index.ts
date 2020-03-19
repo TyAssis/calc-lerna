@@ -2,26 +2,33 @@ import debug from 'debug';
 import rl from 'readline-sync';
 import { sum } from 'sum';
 import { subtract } from 'subtract';
+import { callbackify } from 'util';
 
 let numbers: number[] = [];
 let option: string;
+let operations: any = {};
 
 const runnerLog = debug('runner');
+
+const addOperations = (calculatorOperations: Function[]) => {
+  calculatorOperations.forEach(operation => {
+    operations[operation.name] = operation;
+  })
+};
+
+const defaultOps = [sum, subtract];
+addOperations(defaultOps);
 
 const loop = () => {
   option = rl.question(runnerLog('Choose a function: '));
   
   numbers = (rl.question(runnerLog('Put numbers: '))).split(' ').map(val => +val);
 
-  switch (option) {
-    case 'sum':
-      sum(numbers);
-      break;
-    case 'sub':
-      subtract(numbers);
-      break;
-    default:
-      break;
+  try {
+    const exec = operations[option];
+    exec(numbers);
+  } catch (err) {
+    runnerLog('This calc cannot perform this operation')
   }
 
   console.log('\n\n');
@@ -30,4 +37,4 @@ const loop = () => {
   loop();
 };
 
-export { loop };
+export { loop, addOperations };

@@ -1,5 +1,5 @@
 {
-  "name": "calc-v2",
+  "name": "times",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,8 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "@types/debug": "^4.1.5",
-    "debug": "^4.1.1",
-    "runner": "github:TyAssis/runner#1.0.0",
-    "times": "github:TyAssis/times#1.0.0"
+    "debug": "^4.1.1"
   }
 }
