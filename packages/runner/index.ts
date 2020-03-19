@@ -1,8 +1,7 @@
 import debug from 'debug';
 import rl from 'readline-sync';
 import { sum } from 'sum';
-import { subtract } from 'subtract';
-import { callbackify } from 'util';
+import { substract } from 'substract';
 
 let numbers: number[] = [];
 let option: string;
@@ -16,7 +15,7 @@ const addOperations = (calculatorOperations: Function[]) => {
   })
 };
 
-const defaultOps = [sum, subtract];
+const defaultOps = [sum, substract];
 addOperations(defaultOps);
 
 const loop = () => {
