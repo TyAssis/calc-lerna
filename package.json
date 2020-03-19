@@ -18,6 +18,8 @@
     "@types/readline-sync": "^1.4.3",
     "debug": "^4.1.1",
     "lerna": "^3.20.2",
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "sum": "github:TyAssis/sum#1.0.0",
+    "subtract": "github:TyAssis/subtract#1.0.0"
   }
 }
