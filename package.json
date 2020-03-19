@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "DEBUG=* ts-node index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lerna-init": "lerna init",
+    "lerna-update": "lerna bootstrap"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +17,7 @@
     "@types/node": "^13.9.2",
     "@types/readline-sync": "^1.4.3",
     "debug": "^4.1.1",
+    "lerna": "^3.20.2",
     "readline-sync": "^1.4.10"
   }
 }
