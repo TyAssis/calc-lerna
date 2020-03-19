@@ -1,7 +1,7 @@
 import debug from 'debug';
 import rl from 'readline-sync';
-import { sum } from './packages/sum';
-import { subtract } from './packages/subtract';
+import { sum } from 'sum';
+import { subtract } from 'subtract';
 
 
 const calcLog = debug('calculator');
